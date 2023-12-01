@@ -5,10 +5,10 @@ function Homepage() {
 
   return (
     <div className="HomePageHolder">
-      <div className="HomePageHeader">
+      <div className="HomePageHeader animate__animated animate__pulse ">
         <h2 className="HomePageTitle">Elev8Folio</h2>
         <div className="PHolder">
-          <p className="HPP1">
+          <p className="HPP1 ">
             {" "}
             Made <span>for</span> Students
           </p>

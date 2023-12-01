@@ -146,12 +146,13 @@
 /* Home Page CSS Start*/
 
 .HomePageHolder {
+  color: beige;
   display: flex;
   height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 248, 248);
+  background-color: rgb(215, 236, 237);
 }
 
 .HomePageHeader {
@@ -160,13 +161,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 25%;
+  animation: pulse infinite;
+  --animate-duration: 4s;
 }
 
 .HomePageTitle {
   color: white;
   font-weight: bold;
   font-size: 2.9em;
-  margin-top: 1em;
+  margin: 1em 0.4em 0em;
+
+
 }
 
 .PHolder {
@@ -186,10 +192,12 @@
 
 .HPP1 {
   position: relative;
-  margin: 0em;
+  box-sizing: border-box;
+  padding: 0.5em;
   right: 5em;
+  margin: 0em;
   background-color: rgb(71, 217, 212);
-  border-radius: 20%;
+  border-radius: 5%;
 }
 
 .whiteCircle {
@@ -204,14 +212,20 @@
 }
 
 
+/* Apply styles to elements with class .HPP2 */
 .HPP2 {
+  box-sizing: border-box;
   position: relative;
+  padding: 0.5em;
   right: -5em;
   margin: 0em;
   background-color: rgb(71, 217, 212);
-  border-radius: 20%;
+  border-radius: 5%;
+
 }
 
+
+/* Define the animation */
 
 .StepOne {
   font-size: bolder;
