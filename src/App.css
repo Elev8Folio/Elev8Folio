@@ -1,5 +1,6 @@
 * {
   font-size: 1.1em;
+
 }
 
 .App {
@@ -165,10 +166,11 @@
   --animate-duration: 8s;
 }
 
-.FolioBg{
+.FolioBg {
   display: block;
   height: 50vh;
   border-radius: 5%;
+
 
 }
 
@@ -234,6 +236,23 @@
 
 }
 
+.MakerName {
+  position: absolute;
+  display: flex;
+  width: fit-content;
+  gap: 1em;
+  font-size: 0.95em;
+  justify-content: space-around;
+  color: white;
+  top: 55%;
+  font-weight: normal;
+}
+
+.MakerName span {
+  color: #3C7425;
+  font-weight: 500;
+  font-style: italic;
+}
 
 /* Define the animation */
 
