@@ -4,8 +4,8 @@ import SumeNav from "./Components/SumeNav";
 import Sume from "./Components/Sume";
 import { useState } from "react";
 import Homepage from "./Components/Homepage";
-import Step1 from "./Components/Step1";
 import "animate.css";
+import SecondPageBody from "./Components/SecondPageBody";
 
 function App() {
   const [HP, setHP] = useState(true);
@@ -19,7 +19,7 @@ function App() {
       {HP ? (
         <>
           <Homepage></Homepage>
-          <Step1></Step1>
+          <SecondPageBody></SecondPageBody>
         </>
       ) : (
         <>

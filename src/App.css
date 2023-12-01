@@ -146,15 +146,7 @@
 
 /* Home Page CSS Start*/
 
-.Name {
-  display: flex;
-  width: 100vh;
-  flex-direction: row;
-  background-color: red;
-}
-.Name input{
-  border:none;
-}
+
 
 .HomePageHolder {
   display: flex;
@@ -234,6 +226,35 @@
   z-index: 2;
 
 
+}
+
+/* Second Page Boduy */
+.SecondPageBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin-top: 6em;
+}
+
+.Name {
+  margin-bottom: 3em;
+}
+
+.Name input[type="text"]::placeholder {
+  text-align: center;
+  color: lightgray; /* Set the color of the input text to light gray */
+}
+.Name input{
+  border: none;
+}
+.Title input{
+  text-align: center;
+  border: none;
+  color: lightgray; 
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 
