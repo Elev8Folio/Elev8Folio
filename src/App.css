@@ -156,6 +156,11 @@
 }
 
 .HomePageHeader {
+  position: relative;
+
+  width: 20em;
+  height: 20em;
+  font-size: 0.90em;
 
   display: flex;
   flex-direction: column;
@@ -168,7 +173,8 @@
 
 .FolioBg {
   display: block;
-  height: 50vh;
+  position: absolute;
+  height: inherit;
   border-radius: 5%;
 
 
@@ -239,16 +245,21 @@
 .MakerName {
   position: absolute;
   display: flex;
-  width: fit-content;
   gap: 1em;
-  font-size: 0.95em;
+
   justify-content: space-around;
   color: white;
-  top: 55%;
   font-weight: normal;
+
+  top: 60%;
+  font-size: 0.95em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
 .MakerName span {
+  font-size: inherit;
   color: #3C7425;
   font-weight: 500;
   font-style: italic;
