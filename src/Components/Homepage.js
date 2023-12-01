@@ -13,6 +13,10 @@ function Homepage() {
             From<span>&lt;two&gt;</span>students
           </p>
         </div>
+        <div className="MakerName2">
+          <p>Norsang</p>
+          <p>Tsewang</p>
+        </div>
       </div>
     </div>
   );
