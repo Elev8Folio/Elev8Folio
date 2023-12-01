@@ -15,8 +15,6 @@ function App() {
 
   return (
     <>
-      <button onClick={handleHP}>Go to PPage</button>
-
       {HP ? (
         <Homepage></Homepage>
       ) : (
@@ -28,6 +26,7 @@ function App() {
           </div>
         </>
       )}
+      <button onClick={handleHP}>Go to PPage</button>
     </>
   );
 }

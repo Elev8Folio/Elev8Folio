@@ -12,7 +12,7 @@ function Homepage() {
             {" "}
             Made <span>for</span> Students
           </p>
-          <span className="whiteCircle"></span>
+          <div className="whiteCircle"></div>
           <p className="HPP2">
             {" "}
             From <span>two</span> Students
