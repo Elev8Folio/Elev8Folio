@@ -14,8 +14,12 @@ function Homepage() {
           </p>
         </div>
         <div className="MakerName2">
-          <p>Norsang</p>
-          <p>Tsewang</p>
+          <p>
+            <span>&lt;Tsewang&gt;</span>
+          </p>
+          <p>
+            <span>&lt;Norsang&gt;</span>
+          </p>
         </div>
       </div>
     </div>

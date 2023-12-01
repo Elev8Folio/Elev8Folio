@@ -260,7 +260,7 @@
 .MakerName2 {
   position: absolute;
   display: flex;
-  gap: 7em;
+  gap: 2em;
   justify-content: space-around;
   color: white;
   font-weight: normal;
