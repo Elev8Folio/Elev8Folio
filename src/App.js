@@ -4,6 +4,8 @@ import SumeNav from "./Components/SumeNav";
 import Sume from "./Components/Sume";
 import { useState } from "react";
 import Homepage from "./Components/Homepage";
+import "animate.css";
+import SecondPageBody from "./Components/SecondPageBody";
 
 function App() {
   const [HP, setHP] = useState(true);
@@ -14,10 +16,11 @@ function App() {
 
   return (
     <>
-      <button onClick={handleHP}>Go to PPage</button>
-
       {HP ? (
-        <Homepage></Homepage>
+        <>
+          <Homepage></Homepage>
+          <SecondPageBody></SecondPageBody>
+        </>
       ) : (
         <>
           <Header />
@@ -27,6 +30,7 @@ function App() {
           </div>
         </>
       )}
+      <button onClick={handleHP}>Go to PPage</button>
     </>
   );
 }

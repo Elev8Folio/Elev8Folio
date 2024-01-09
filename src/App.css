@@ -1,5 +1,6 @@
 * {
   font-size: 1.1em;
+
 }
 
 .App {
@@ -145,28 +146,48 @@
 
 /* Home Page CSS Start*/
 
+
+
 .HomePageHolder {
   display: flex;
   height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 248, 248);
+  background-color: rgb(254, 242, 215);
 }
 
 .HomePageHeader {
-  background-color: rgb(71, 217, 212);
+  position: relative;
+
+  width: 20em;
+  height: 20em;
+  font-size: 0.90em;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  animation: pulse infinite;
+  --animate-duration: 20s;
+}
+
+.FolioBg {
+  display: block;
+  position: absolute;
+  height: inherit;
+  border-radius: 5%;
+
+
 }
 
 .HomePageTitle {
   color: white;
   font-weight: bold;
   font-size: 2.9em;
-  margin-top: 1em;
+  margin: 1em 0.4em 0em;
+
 }
 
 .PHolder {
@@ -175,7 +196,6 @@
   margin-bottom: 2em;
   color: rgb(72, 68, 68);
   display: block;
-  background-color: rgb(71, 217, 212);
 
 }
 
@@ -186,32 +206,133 @@
 
 .HPP1 {
   position: relative;
+  box-sizing: border-box;
+  padding: 0.5em;
+  right: 7em;
   margin: 0em;
-  right: 5em;
-  background-color: rgb(71, 217, 212);
-  border-radius: 20%;
+  top: 0.7em;
+  /* background-color: red; */
+  /* background-color: rgb(71, 217, 212); */
+  border-radius: 5%;
 }
 
 .whiteCircle {
-  height: 0.7em;
-  width: 0.7em;
+  height: 0.5em;
+  width: 0.5em;
   position: relative;
-  display: inline-block;
   background-color: aliceblue;
   border-radius: 50%;
-  left: 5.5em;
+  left: 4em;
+  z-index: 2;
+
 
 }
 
+/* Second Page Boduy */
+.SecondPageBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin-top: 6em;
+}
 
+.Name {
+  margin-bottom: 3em;
+}
+
+.Name input[type="text"]::placeholder {
+  text-align: center;
+  color: lightgray; /* Set the color of the input text to light gray */
+}
+.Name input{
+  border: none;
+}
+.Title input{
+  text-align: center;
+  border: none;
+  color: lightgray; 
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+
+/* Apply styles to elements with class .HPP2 */
 .HPP2 {
+  box-sizing: border-box;
   position: relative;
-  right: -5em;
+  padding: 0.5em;
+  right: -7.5em;
+  bottom: 0.7em;
   margin: 0em;
-  background-color: rgb(71, 217, 212);
-  border-radius: 20%;
+  z-index: 1;
+  /* background-color: red; */
+  /* background-color: rgb(71, 217, 212); */
+  border-radius: 5%;
+
 }
 
+.MakerName {
+  position: absolute;
+  display: flex;
+  gap: 1em;
+  justify-content: space-around;
+  color: white;
+  font-weight: normal;
+  top: 60%;
+  font-size: 0.95em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: ChangeName 6s infinite;
+}
+
+.MakerName2 {
+  position: absolute;
+  display: flex;
+  gap: 2em;
+  justify-content: space-around;
+  color: white;
+  font-weight: normal;
+  top: 60%;
+  font-size: 0.95em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: ChangeName 6s infinite;
+  animation-delay: 3s;
+
+}
+
+@keyframes ChangeName {
+  0% {
+    opacity: 0;
+  }
+
+  49% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.MakerName span,
+.MakerName2 span {
+  font-size: inherit;
+  color: #3C7425;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Define the animation */
 
 .StepOne {
   font-size: bolder;

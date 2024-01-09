@@ -1,28 +1,24 @@
-function Homepage() {
-  const clicked = () => {
-    alert("Upload my friend");
-  };
+import FolioImg from "../Images/FolioImg1.png";
 
+function Homepage() {
   return (
     <div className="HomePageHolder">
-      <div className="HomePageHeader">
-        <h2 className="HomePageTitle">Elev8Folio</h2>
-        <div className="PHolder">
-          <p className="HPP1">
-            {" "}
-            Made <span>for</span> Students
+      <div className="HomePageHeader animate__animated animate__pulse ">
+        <img alt="FolioIcon" src={FolioImg} className="FolioBg"></img>
+        <div className="MakerName">
+          <p>
+            Made<span>&lt;for&gt;</span>students
           </p>
-          <span className="whiteCircle"></span>
-          <p className="HPP2">
-            {" "}
-            From <span>two</span> Students
+          <p>
+            From<span>&lt;two&gt;</span>students
           </p>
         </div>
-      </div>
-      <div className="HomePageBody">
-        <div className="StepOne">
+        <div className="MakerName2">
           <p>
-            STEP 1: <span onClick={clicked}> Upload Resume </span>
+            <span>&lt;Tsewang&gt;</span>
+          </p>
+          <p>
+            <span>&lt;Norsang&gt;</span>
           </p>
         </div>
       </div>
