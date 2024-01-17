@@ -238,25 +238,46 @@
   margin-top: 6em;
 }
 
-.Name {
-  margin-bottom: 3em;
+.inputInfo {
+  padding: 1em;
 }
 
-.Name input[type="text"]::placeholder {
+.inputInfo input{
   text-align: center;
-  color: lightgray; /* Set the color of the input text to light gray */
-}
-.Name input{
-  border: none;
-}
-.Title input{
-  text-align: center;
-  border: none;
-  color: lightgray; 
-  margin-top: 3em;
-  margin-bottom: 3em;
 }
 
+.inputInfo input[type="text"]::placeholder {
+  text-align: center;
+  color: rgb(204, 204, 204); /* Set the color of the input text to light gray */
+  font-style: bold;
+}
+
+.inputInfo input{
+  border: none;
+}
+
+.inputInfo > input:focus {
+  outline: none;
+}
+
+#university {
+  width: 35em;
+  font-size: 1.8em;
+}
+
+#Fname, #Lname {
+  width: 6em;
+  font-size: 1.8em;
+}
+
+#title {
+  width: 35em;
+  font-size: 1.8em;
+}
+
+#toggleButton {
+  align-items: center;
+}
 
 /* Apply styles to elements with class .HPP2 */
 .HPP2 {
