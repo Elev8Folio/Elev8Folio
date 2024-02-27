@@ -1,0 +1,25 @@
+
+.HomePageHolder {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(254, 242, 215);
+  }
+
+.HomePageHeader {
+    position: relative;
+  
+    width: 20em;
+    height: 20em;
+    font-size: 0.90em;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    animation: pulse infinite;
+    --animate-duration: 20s;
+  }  

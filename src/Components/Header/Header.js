@@ -1,8 +1,6 @@
-import Icon from "./Icon";
-
-import ProfileImage from "./ProfileImage";
-
-import { useEffect, useState } from "react";
+import Icon from "../Icon";
+import ProfileImage from "../ProfileImage";
+import "./Header.css";
 
 function Header(props) {
   let source =

@@ -1,4 +1,5 @@
-import FolioImg from "../Images/FolioImg1.png";
+import FolioImg from "../../Images/FolioImg1.png";
+import "./Homepage.css";
 
 function Homepage() {
   return (

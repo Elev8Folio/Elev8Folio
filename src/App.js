@@ -1,9 +1,9 @@
 import "./App.css";
-import Header from "./Components/Header";
+import Header from "./Components/Header/Header";
 import SumeNav from "./Components/SumeNav";
 import Sume from "./Components/Sume";
 import { useState } from "react";
-import Homepage from "./Components/Homepage";
+import Homepage from "./Components/Homepage/Homepage";
 import "animate.css";
 import SecondPageBody from "./Components/SecondPageBody";
 
@@ -30,7 +30,9 @@ function App() {
           </div>
         </>
       )}
-      <button onClick={handleHP}>Go to PPage</button>
+      <button id="toggleButton" onClick={handleHP}>
+        Go to PPage
+      </button>
     </>
   );
 }
