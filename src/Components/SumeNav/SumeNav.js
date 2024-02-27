@@ -1,3 +1,5 @@
+import "./SumeNav.css";
+
 function SumeNav(props) {
   let sume = {
     School: "New Jersey Institute of Technology",

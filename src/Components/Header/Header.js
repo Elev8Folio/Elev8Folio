@@ -1,5 +1,5 @@
-import Icon from "../Icon";
-import ProfileImage from "../ProfileImage";
+import Icon from "../Icon/Icon";
+import ProfileImage from "../ProfileImage/ProfileImage";
 import "./Header.css";
 
 function Header(props) {

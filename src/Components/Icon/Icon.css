@@ -1,0 +1,18 @@
+.Icon a {
+    width: inherit;
+  }
+  
+  .Icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+  }
+  
+  .Icon img {
+    width: inherit;
+    border-radius: 50%;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.368);
+  
+  }

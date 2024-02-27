@@ -1,11 +1,11 @@
 import "./App.css";
 import Header from "./Components/Header/Header";
-import SumeNav from "./Components/SumeNav";
-import Sume from "./Components/Sume";
+import SumeNav from "./Components/SumeNav/SumeNav";
+import Sume from "./Components/Sume/Sume";
 import { useState } from "react";
 import Homepage from "./Components/Homepage/Homepage";
 import "animate.css";
-import SecondPageBody from "./Components/SecondPageBody";
+import SecondPageBody from "./Components/SecondPageBody/SecondPageBody";
 
 function App() {
   const [HP, setHP] = useState(true);

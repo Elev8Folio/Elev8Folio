@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./SecondPageBody.css";
+
 function SecondPageBody() {
   const [Progression, setProgression] = useState(0);
   let InputList = [

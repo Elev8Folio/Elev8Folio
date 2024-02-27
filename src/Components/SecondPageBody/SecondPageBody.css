@@ -1,0 +1,41 @@
+.SecondPageBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin-top: 6em;
+  }
+  
+  .inputInfo {
+    padding: 1em;
+  }
+  
+  .inputInfo input{
+    text-align: center;
+  }
+  
+  .inputInfo input[type="text"]::placeholder {
+    text-align: center;
+    color: rgb(204, 204, 204); /* Set the color of the input text to light gray */
+    font-style: bold;
+  }
+  
+  .inputInfo input{
+    border: none;
+  }
+  
+  .inputInfo > input:focus {
+    outline: none;
+  }
+
+  .StepOne {
+    font-size: bolder;
+  
+  }
+  
+  .StepOne span:hover {
+  
+    cursor: pointer;
+  }
+  
