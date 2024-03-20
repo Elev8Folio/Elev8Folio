@@ -1,14 +1,12 @@
-
 .HomePageHolder {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(254, 242, 215);
-  }
+  position: relative; /* Changed to relative to support absolute positioning of children */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(254, 242, 215);
+}
 
-.HomePageHeader {
+
+/* .HomePageHeader {
     position: relative;
   
     width: 20em;
@@ -22,7 +20,12 @@
   
     animation: pulse infinite;
     --animate-duration: 20s;
-  }  
+  }   */
+  .HomePageHeader{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+  }
 
   .MakerName {
     position: absolute;
@@ -31,9 +34,7 @@
     justify-content: space-around;
     color: white;
     font-weight: normal;
-    top: 60%;
     font-size: 0.95em;
-    left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
     animation: ChangeName 6s infinite;
@@ -46,9 +47,7 @@
     justify-content: space-around;
     color: white;
     font-weight: normal;
-    top: 60%;
     font-size: 0.95em;
-    left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
     animation: ChangeName 6s infinite;
@@ -82,3 +81,14 @@
     font-weight: 500;
     font-style: italic;
   }
+
+  /* For the box */
+  .DraggableBox {
+    position: absolute; /* Keeps box absolutely positioned */
+    width: 24em; /* Adjust as needed */
+    height: 18em; /* Adjust as needed */
+    background-color: #F6BD47;
+    border-radius: 25px;
+    cursor: grab; /* Optional: Changes cursor to indicate draggability */
+  }
+  
