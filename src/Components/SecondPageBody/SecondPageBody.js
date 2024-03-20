@@ -1,93 +1,73 @@
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./SecondPageBody.css";
 
-function SecondPageBody(props) {
+function SecondPageBody() {
   const [imageData, setImageData] = useState(null);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    university: "",
+    title: "",
+  });
+  const navigate = useNavigate(); // Using useNavigate instead of useHistory
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        // After the file is loaded, set the imageData state to the base64 representation of the image
         setImageData(reader.result);
       };
-      reader.readAsDataURL(file); // Convert file to base64
+      reader.readAsDataURL(file);
     }
   };
-  const clicked = () => {
-    alert("Upload my friend");
-  };
-  const [Progression, setProgression] = useState(0);
-  let InputList = [
-    <input
-      onChange={(e) => handleChange(e)}
-      type="text"
-      placeholder="First Name"
-      id="Fname"
-    />,
-    <input
-      onChange={(e) => handleChange(e)}
-      type="text"
-      placeholder="Last Name"
-      id="Lname"
-    />,
-    <input
-      onChange={(e) => handleChange(e)}
-      type="text"
-      placeholder="University"
-      id="university"
-    />,
-    <input
-      onChange={(e) => handleChange(e)}
-      type="text"
-      placeholder="Title"
-      id="title"
-    />,
-  ];
+
   const handleChange = (e) => {
-    if (e.target.id === "Fname" && e.target.value !== "" && Progression === 0)
-      setProgression(1);
-    else if (
-      e.target.id === "Lname" &&
-      e.target.value !== "" &&
-      Progression === 1
-    )
-      setProgression(2);
-    else if (
-      e.target.id === "university" &&
-      e.target.value !== "" &&
-      Progression === 2
-    )
-      setProgression(3);
-    else if (
-      e.target.id === "title" &&
-      e.target.value !== "" &&
-      Progression === 3
-    )
-      setProgression(4);
+    const { id, value } = e.target;
+    setFormData((prevFormData) => ({ ...prevFormData, [id]: value }));
+  };
+
+  const handleCreatePortfolio = () => {
+    // Here you can send the formData to the server or do anything else with it
+    // Then navigate to the Sume component passing the formData and imageData as state
+    navigate("/sume", { state: { formData, imageData } });
   };
 
   return (
     <div className="SecondPageBody">
       <div className="inputInfo">
-        {InputList[0]}
-        {Progression > 0 && InputList[1]}
+        <input
+          onChange={(e) => handleChange(e)}
+          type="text"
+          placeholder="First Name"
+          id="firstName"
+        />
+        <input
+          onChange={(e) => handleChange(e)}
+          type="text"
+          placeholder="Last Name"
+          id="lastName"
+        />
+        <input
+          onChange={(e) => handleChange(e)}
+          type="text"
+          placeholder="University"
+          id="university"
+        />
+        <input
+          onChange={(e) => handleChange(e)}
+          type="text"
+          placeholder="Title"
+          id="title"
+        />
       </div>
-
-      <div className="inputInfo">{Progression > 1 && InputList[2]}</div>
-      <div className="inputInfo">{Progression > 2 && InputList[3]}</div>
-
-      {Progression > 3 && (
-        <div className="StepOne">
-          <p>
-            <input type="file" accept="image/*" onChange={handleImageChange} />
-            <button onClick={() => props.Continue(false)}>
-              Create PortFolio
-            </button>
-          </p>
-        </div>
-      )}
+      <div className="StepOne">
+        <p>
+          <input type="file" accept="image/*" onChange={handleImageChange} />
+          <button onClick={handleCreatePortfolio}>Create Portfolio</button>
+        </p>
+      </div>
     </div>
   );
 }

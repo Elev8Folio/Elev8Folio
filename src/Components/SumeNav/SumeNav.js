@@ -1,9 +1,10 @@
 import "./SumeNav.css";
 
 function SumeNav(props) {
+  console.log(props.formData);
   let sume = {
-    School: "New Jersey Institute of Technology",
-    Project: "Big Data",
+    School: props.formData.university,
+    Title: props.formData.title,
     Experience: "Microsoft Summer Internship",
   };
 
