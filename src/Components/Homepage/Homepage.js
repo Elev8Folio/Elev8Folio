@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import "./Homepage.css";
 
 function Homepage() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(
+    Math.min(window.innerWidth, window.innerWidth)
+  );
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [initialPosition, setInitialPosition] = useState({ x: 0, y: 0 });
 
@@ -42,15 +44,29 @@ function Homepage() {
         dragConstraints={{
           top: -initialPosition.y,
           left: -initialPosition.x,
-          right: initialPosition.x,
-          bottom: initialPosition.y,
+          right:
+            window.innerWidth -
+            initialPosition.x -
+            24 *
+              2 *
+              parseFloat(getComputedStyle(document.documentElement).fontSize), // Adjusted for the width of the box
+          bottom: window.innerHeight - initialPosition.y,
         }}
         style={{
           top: initialPosition.y,
           left: initialPosition.x,
         }}
       >
-        <div className="HomePageHeader animate__animated animate__pulse">
+        <motion.h1
+          className="Header"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Elev8Folio
+        </motion.h1>
+
+        <div className="HomePageHeader animate__animated">
           <div className="MakerName">
             <p>
               Made<span>&lt;for&gt;</span>students
