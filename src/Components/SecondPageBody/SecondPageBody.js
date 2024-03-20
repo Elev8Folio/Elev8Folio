@@ -1,7 +1,23 @@
 import { useState } from "react";
 import "./SecondPageBody.css";
 
-function SecondPageBody() {
+function SecondPageBody(props) {
+  const [imageData, setImageData] = useState(null);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        // After the file is loaded, set the imageData state to the base64 representation of the image
+        setImageData(reader.result);
+      };
+      reader.readAsDataURL(file); // Convert file to base64
+    }
+  };
+  const clicked = () => {
+    alert("Upload my friend");
+  };
   const [Progression, setProgression] = useState(0);
   let InputList = [
     <input
@@ -52,10 +68,6 @@ function SecondPageBody() {
       setProgression(4);
   };
 
-  const clicked = () => {
-    alert("Upload my friend");
-  };
-
   return (
     <div className="SecondPageBody">
       <div className="inputInfo">
@@ -69,7 +81,10 @@ function SecondPageBody() {
       {Progression > 3 && (
         <div className="StepOne">
           <p>
-            <span onClick={clicked}> Upload Picture </span>
+            <input type="file" accept="image/*" onChange={handleImageChange} />
+            <button onClick={() => props.Continue(false)}>
+              Create PortFolio
+            </button>
           </p>
         </div>
       )}

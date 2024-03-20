@@ -19,20 +19,13 @@ function App() {
       {HP ? (
         <>
           <Homepage></Homepage>
-          <SecondPageBody></SecondPageBody>
+          <SecondPageBody Continue={setHP}></SecondPageBody>
         </>
       ) : (
         <>
-          <Header />
-          <div className="Body">
-            <SumeNav />
-            <Sume />{" "}
-          </div>
+          <p>Hello</p>
         </>
       )}
-      <button id="toggleButton" onClick={handleHP}>
-        Go to PPage
-      </button>
     </>
   );
 }
